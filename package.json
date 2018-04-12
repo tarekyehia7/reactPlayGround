@@ -1,9 +1,13 @@
 {
-  "name": "pluralsight-redux-starter",
+  "name": "play-ground",
   "version": "1.0.0",
-  "description": "Starter kit for React and Redux Pluralsight course by Cory House",
-  "author": "Cory House",
-  "license": "MIT",
+  "description": "Starter kit for React and Redux",
+  "scripts": {
+      "prestart": "babel-node tools/startMessage.js",
+      "start": "babel-node tools/srcServer.js"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
@@ -58,6 +62,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/pluralsight-redux-starter"
+    "url": "https://github.com/tarekyehia7/reactPlayGround.git"
   }
 }
