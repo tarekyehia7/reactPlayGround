@@ -7,9 +7,9 @@ class App extends React.Component{
                 <p>header...</p>
                 {this.props.children}
             </div>
-        )
-    };
-};
+        );
+    }
+}
 
 App.propTypes = {
     children: PropTypes.object.isRequired
