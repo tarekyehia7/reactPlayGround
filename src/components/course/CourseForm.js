@@ -1,0 +1,61 @@
+import React, { PropTypes } from 'react';
+import TextInput from '../common/TextInput';
+import SelectInput from '../common/SelectInput';
+import ManageCoursePage from './ManageCoursePage';
+
+
+const CourseForm = ({course, AllAuthors, onSave, onChange, loading, errors}) =>{
+    return(
+        <form>
+            <h1>
+                <TextInput
+                    name="title"
+                    label="Title"
+                    value={course.title}
+                    onChange={onChange}
+                    error={errors.title}
+                />
+                <SelectInput
+                    name="authorId"
+                    label="Author"
+                    value={course.authorId}
+                    defaultOption="Select Author..."
+                    options={allAuthors}
+                    onChange={onChange} error={errors.title}
+                />
+                <TextInput
+                    name="category"
+                    label="Category"
+                    value={course.category}
+                    onChange={onChange}
+                    error={errors.title}
+                />
+                <TextInput
+                    name="length"
+                    label="Length"
+                    value={course.Length}
+                    onChange={onChange}
+                    error={errors.title}
+                />
+                <input
+                    type="submit"
+                    disabled={loading}
+                    value={loading? 'Saving..': 'Save'}
+                    className="btn btn-primary"
+                    onClick={onSave}
+                />
+            </h1>
+        </form>
+    );
+};
+
+ManageCoursePage.propTypes = {
+    course: React.PropTypes.object.isRequired, 
+    AllAuthors: React.PropTypes.array.isRequired, 
+    onSave: React.PropTypes.func.isRequired, 
+    onChange: React.PropTypes.func.isRequired,
+    loading: React.PropTypes.bool, 
+    errors: React.PropTypes.object
+};
+
+export default CourseForm;
