@@ -41,3 +41,4 @@ function mapStateToProps(state, OwnProps){
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
+
