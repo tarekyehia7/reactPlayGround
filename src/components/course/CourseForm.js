@@ -1,13 +1,11 @@
 import React, { PropTypes } from 'react';
 import TextInput from '../common/TextInput';
 import SelectInput from '../common/SelectInput';
-import ManageCoursePage from './ManageCoursePage';
 
-
-const CourseForm = ({course, AllAuthors, onSave, onChange, loading, errors}) =>{
+const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) =>{
     return(
         <form>
-            <h1>
+            <h1>Manage Course</h1>
                 <TextInput
                     name="title"
                     label="Title"
@@ -44,14 +42,13 @@ const CourseForm = ({course, AllAuthors, onSave, onChange, loading, errors}) =>{
                     className="btn btn-primary"
                     onClick={onSave}
                 />
-            </h1>
         </form>
     );
 };
 
-ManageCoursePage.propTypes = {
+CourseForm.propTypes = {
     course: React.PropTypes.object.isRequired, 
-    AllAuthors: React.PropTypes.array.isRequired, 
+    allAuthors: React.PropTypes.array.isRequired, 
     onSave: React.PropTypes.func.isRequired, 
     onChange: React.PropTypes.func.isRequired,
     loading: React.PropTypes.bool, 
