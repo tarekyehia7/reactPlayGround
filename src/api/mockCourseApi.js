@@ -26,7 +26,7 @@ const courses = [
     watchHref: "https://www.youtube.com/watch?v=pZD-4ufSltg",
     authorId: "tarek-ibrahim",
     Length: "2:52",
-    category: "Munich Architecture"
+    category: "Munich_Architecture"
   }
 ];
 
