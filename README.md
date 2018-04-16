@@ -1,4 +1,4 @@
-# Starter Kit for play ground for react learning
+# Play ground for react learning
 
 ## Get Started
 1. **Install [NodeJs]**
